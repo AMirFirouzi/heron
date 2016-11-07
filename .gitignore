@@ -127,3 +127,5 @@ website/static/
 
 # Visual Studio Code
 .vscode
+
+.directory

@@ -2,3 +2,8 @@ backtype.storm.topology.StormTopology.createTopology()
   > com.twitter.heron.api.topology.TopologyBuilder.createTopology()
     > 
     
+    
+    
+com.twitter.heron.api.topology.BoltDeclarer.dump()
+  > saves the data of each component based on values in topologyBuilder object that it receives
+  > it's code can be used for generating graph structure, because it's parsing the structure of workflow component by component
