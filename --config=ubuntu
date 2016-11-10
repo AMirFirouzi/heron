@@ -1,0 +1,427 @@
+Build options: --explain='--config=ubuntu'
+Executing action 'BazelWorkspaceStatusAction stable-status.txt': unconditional execution is requested.
+Executing action 'Writing file heron/proto/libproto_common_java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/proto/libproto_execution_state_java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/proto/libproto_topology_java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/src/java/libbasics-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/proto/libproto_stmgr_java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/proto/libproto_stats_java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/proto/libproto_tmaster_java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/proto/libproto_packing_plan_java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/proto/libproto_tuple_java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/proto/libproto_metrics_java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file third_party/java/libkryo.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/src/java/libshell-utils-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/src/java/libuploader-utils-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/src/java/libconfig-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/src/java/libmetricsmgr-spi-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/proto/libproto_physical_plan_java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/src/java/libcommon-spi-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file third_party/java/libjunit4.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file third_party/java/libmockito.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file third_party/java/libpowermock.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/src/java/libuploader-spi-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/api/src/java/libclassification.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/uploaders/src/java/libscp-uploader-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file third_party/java/libjoda_time.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/uploaders/tests/java/LocalFileSystemUploaderTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/uploaders/tests/java/LocalFileSystemUploaderTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/uploaders/tests/java/LocalFileSystemConfigTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/uploaders/tests/java/LocalFileSystemConfigTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/uploaders/src/java/scp-uploader-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/uploaders/src/java/libhdfs-uploader-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/uploaders/src/java/libnull-uploader-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/uploaders/src/java/hdfs-uploader-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Expanding template third_party/pex/_pex': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/tmaster/tests/cpp/server/tmaster_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/tmaster/src/cpp/heron-tmaster-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file third_party/java/liblogging.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/stmgr/tests/cpp/util/xor-manager_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/stmgr/tests/cpp/util/tuple-cache_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/stmgr/tests/cpp/grouping/shuffle-grouping_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/stmgr/tests/cpp/util/rotating-map_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/stmgr/tests/cpp/server/stmgr_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/stmgr/tests/cpp/grouping/lowest-grouping_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/stmgr/tests/cpp/grouping/custom-grouping_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/stmgr/tests/cpp/grouping/all-grouping_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/stmgr/src/cpp/heron-stmgr-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/stmgr/tests/cpp/grouping/fields-grouping_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/src/java/libnetwork-utils-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/statemgrs/tests/cpp/zk-statemgr_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/tests/java/libmetrics-tests.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/tests/java/UploaderUtilsTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/spi/tests/java/UploaderUtilsTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/spi/tests/java/TopologyUtilsTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/spi/tests/java/TopologyUtilsTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/spi/tests/java/ShellUtilsTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/spi/tests/java/ShellUtilsTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/spi/tests/java/SchedulerUtilsTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/spi/tests/java/SchedulerUtilsTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/spi/tests/java/NetworkUtilsTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/spi/tests/java/NetworkUtilsTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/spi/tests/java/MiscTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/spi/tests/java/MiscTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/spi/tests/java/MetricsRecordTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/spi/tests/java/MetricsRecordTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/spi/tests/java/MetricsInfoTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/spi/tests/java/MetricsInfoTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/spi/tests/java/LauncherUtilsTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/tests/java/ExceptionInfoTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/tests/java/ConfigKeysTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/tests/java/ConfigKeysDefaultsTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/proto/libproto_scheduler_java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/tests/java/ConfigDefaultsTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/tests/java/ClusterDefaultsTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/tests/java/ClusterConfigTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/simulator/tests/java/XORManagerTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/simulator/tests/java/TupleCacheTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/simulator/tests/java/StreamConsumersTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/simulator/tests/java/SimulatorTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/simulator/tests/java/ShuffleGroupingTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/simulator/tests/java/RotatingMapTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/simulator/tests/java/PhysicalPlanUtilTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/simulator/tests/java/LowestGroupingTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/simulator/tests/java/InstanceExecutorTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/uploaders/src/java/null-uploader-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/simulator/tests/java/FieldsGroupingTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/simulator/tests/java/CustomGroupingTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/simulator/tests/java/AllGroupingTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/libyarn-tests.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/src/java/libyarn-scheduler-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file third_party/java/libyarn.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/scheduler-core/src/java/libscheduler-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/src/java/spi-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/simulator/tests/java/libsimulator-tests.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file third_party/java/libjackson.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/src/java/libmesos-scheduler-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/libmarathon-tests.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/src/java/libmarathon-scheduler-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/liblocal-tests.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/src/java/libaurora-scheduler-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/libaurora-tests.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/YarnLauncherTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/YarnSchedulerTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/TaskUtilsTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/SlurmSchedulerTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/TaskResourcesTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/SlurmLauncherTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/tests/java/PackingPlanTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/SlurmControllerTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/MesosSchedulerTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/tests/java/ResourceTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/MesosLauncherTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/MesosFrameworkTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/MarathonSchedulerTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/MarathonLauncherTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/statemgrs/src/java/localfs-statemgr-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/tests/java/libutils-tests.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/tests/java/libcommon-tests.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/statemgrs/src/java/libstatemgrs-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/statemgrs/src/java/libnull-statemgr-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/statemgrs/src/java/null-statemgr-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/MarathonControllerTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/statemgrs/tests/java/CuratorStateManagerTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/statemgrs/src/java/zookeeper-statemgr-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/LocalSchedulerTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/LocalLauncherTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/statemgrs/src/java/libzookeeper-statemgr-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/LaunchableTaskTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/HeronMasterDriverTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/src/java/libheron-spi.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/HeronExecutorTaskTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/AuroraSchedulerTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/storm/src/java/storm-compatibility-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/DriverOnLocalReefTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building third_party/java/liblogging.jar (1 source file)': One of the files has changed.
+Executing action 'Writing file heron/simulator/src/java/libsimulator-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/instance/src/java/libinstance-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/src/java/libcommon-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/storm/src/java/libstorm-compatibility-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/statemgrs/tests/java/ZkUtilsTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/statemgrs/tests/java/LocalFileSystemStateManagerTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/statemgrs/src/java/liblocalfs-statemgr-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/AuroraLauncherTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/uploaders/src/java/localfs-uploader-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/AuroraControllerTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/spi/tests/java/LauncherUtilsTest.jar ()': One of the files has changed.
+Executing action 'Building heron/spi/tests/java/ExceptionInfoTest.jar ()': One of the files has changed.
+Executing action 'Building heron/spi/tests/java/ConfigKeysDefaultsTest.jar ()': One of the files has changed.
+Executing action 'Building heron/spi/tests/java/ConfigKeysTest.jar ()': One of the files has changed.
+Executing action 'Building heron/spi/tests/java/ConfigDefaultsTest.jar ()': One of the files has changed.
+Executing action 'Building heron/simulator/tests/java/XORManagerTest.jar ()': One of the files has changed.
+Executing action 'Building heron/spi/tests/java/ClusterDefaultsTest.jar ()': One of the files has changed.
+Executing action 'Building heron/simulator/tests/java/StreamConsumersTest.jar ()': One of the files has changed.
+Executing action 'Building heron/spi/tests/java/ClusterConfigTest.jar ()': One of the files has changed.
+Executing action 'Building heron/simulator/tests/java/RotatingMapTest.jar ()': One of the files has changed.
+Executing action 'Building heron/simulator/tests/java/TupleCacheTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/schedulers/tests/java/AuroraContextTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/uploaders/src/java/s3-uploader-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/simulator/tests/java/SimulatorTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/uploaders/tests/java/HdfsUploaderTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/simulator/tests/java/InstanceExecutorTest.jar ()': One of the files has changed.
+Executing action 'Building heron/simulator/tests/java/PhysicalPlanUtilTest.jar ()': One of the files has changed.
+Executing action 'Building heron/simulator/tests/java/LowestGroupingTest.jar ()': One of the files has changed.
+Executing action 'Building heron/simulator/tests/java/CustomGroupingTest.jar ()': One of the files has changed.
+Executing action 'Building heron/simulator/tests/java/ShuffleGroupingTest.jar ()': One of the files has changed.
+Executing action 'Building heron/simulator/tests/java/AllGroupingTest.jar ()': One of the files has changed.
+Executing action 'Building heron/simulator/tests/java/FieldsGroupingTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/schedulers/src/java/null-scheduler-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/src/java/mesos-scheduler-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building third_party/java/libjoda_time.jar (1 source file)': One of the files has changed.
+Executing action 'Writing file heron/schedulers/src/java/marathon-scheduler-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/scheduler-core/tests/java/UpdateTopologyManagerTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/uploaders/src/java/libs3-uploader-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/scheduler-core/tests/java/SubmitterMainTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file third_party/java/libaws-java-sdk.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/uploaders/tests/java/S3UploaderTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/scheduler-core/tests/java/SchedulerServerTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/uploaders/tests/java/ScpUploaderTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/api/src/java/libclassification.jar (3 source files, 1 resource)': One of the files has changed.
+Executing action 'Building heron/common/src/java/libbasics-java.jar (11 source files)': One of the files has changed.
+Executing action 'Building heron/spi/src/java/libshell-utils-java.jar (1 source file)': One of the files has changed.
+Executing action 'Building heron/spi/src/java/libmetricsmgr-spi-java.jar (6 source files)': One of the files has changed.
+Executing action 'Writing file heron/scheduler-core/tests/java/SchedulerMainTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/scheduler-core/tests/java/SchedulerClientFactoryTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/scheduler-core/tests/java/RuntimeManagerRunnerTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building third_party/java/libpowermock.jar (1 source file)': One of the files has changed.
+Executing action 'Building third_party/java/libmockito.jar (1 source file)': One of the files has changed.
+Executing action 'Writing file heron/api/src/java/api-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building third_party/java/libjunit4.jar (1 source file)': One of the files has changed.
+Executing action 'Writing file heron/scheduler-core/tests/java/RuntimeManagerMainTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/src/java/libstatemgr-spi-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/src/java/libscheduler-spi-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/src/java/libpacking-spi-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/spi/src/java/libutils-spi-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/uploaders/src/java/liblocalfs-uploader-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/scheduler-core/tests/java/LibrarySchedulerClientTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/uploaders/tests/java/liblocalfs-tests.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/api/src/java/libapi-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/scheduler-core/tests/java/LaunchRunnerTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building third_party/java/libkryo.jar (1 source file)': One of the files has changed.
+Executing action 'Writing file heron/scheduler-core/tests/java/HttpServiceSchedulerClientTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/proto/libproto-java-nl.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file third_party/java/libprotobuf-java-neverlink.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/proto/libproto_networktests_java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/packing/tests/java/libpacking-utils.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/packing/src/java/libbinpacking-packing.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/scheduler-core/tests/java/libscheduler-core-tests.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/packing/tests/java/RoundRobinPackingTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/src/java/aurora-scheduler-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/src/java/local-scheduler-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/src/java/libnull-scheduler-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/packing/tests/java/PackingUtilsTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/src/java/slurm-scheduler-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/packing/tests/java/PackingPlanBuilderTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/packing/tests/java/FirstFitDecreasingPackingTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building third_party/java/libjackson.jar (1 source file)': One of the files has changed.
+Executing action 'Writing file heron/packing/src/java/binpacking-packing-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/metricsmgr/tests/java/libmetricsmgr-tests.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/metricsmgr/src/java/libmetricsmgr-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/packing/src/java/roundrobin-packing-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/metricsmgr/src/thrift/libthrift_scribe_java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/metricsmgr/tests/java/TMasterSinkTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/schedulers/tests/java/YarnLauncherTest.jar ()': One of the files has changed.
+Executing action 'Building heron/schedulers/tests/java/YarnSchedulerTest.jar ()': One of the files has changed.
+Executing action 'Building heron/schedulers/tests/java/TaskUtilsTest.jar ()': One of the files has changed.
+Executing action 'Building heron/schedulers/tests/java/SlurmSchedulerTest.jar ()': One of the files has changed.
+Executing action 'Building heron/schedulers/tests/java/SlurmControllerTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/metricsmgr/tests/java/SinkExecutorTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/metricsmgr/tests/java/MetricsManagerServerTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/schedulers/tests/java/MesosSchedulerTest.jar ()': One of the files has changed.
+Executing action 'Building heron/schedulers/tests/java/SlurmLauncherTest.jar ()': One of the files has changed.
+Executing action 'Building heron/schedulers/tests/java/TaskResourcesTest.jar ()': One of the files has changed.
+Executing action 'Building heron/schedulers/tests/java/MesosLauncherTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/metricsmgr/tests/java/HandleTMasterLocationTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/src/java/yarn-scheduler-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/schedulers/tests/java/MesosFrameworkTest.jar ()': One of the files has changed.
+Executing action 'Building heron/schedulers/tests/java/MarathonSchedulerTest.jar ()': One of the files has changed.
+Executing action 'Building heron/schedulers/tests/java/MarathonLauncherTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/metricsmgr/tests/java/FileSinkTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/metricsmgr/src/thrift/libthrift-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/metricsmgr/src/java/metricsmgr-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/instance/tests/java/libinstance-tests.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/instance/tests/java/SpoutInstanceTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/instance/tests/java/MultiAssignableMetricTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'PexPython heron/shell/src/python/heron-shell.pex': One of the files has changed.
+Executing action 'Writing file heron/instance/tests/java/HandleWriteTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/instance/tests/java/HandleReadTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/instance/tests/java/GlobalMetricsTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/instance/tests/java/CustomGroupingTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/instance/tests/java/ConnectTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/instance/tests/java/BoltInstanceTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/instance/tests/java/ActivateDeactivateTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file third_party/java/libjarjar.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file third_party/java/jarjar/jarjar_bin.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/examples/src/java/examples-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/java/WakeableLooperTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'PexPython heron/common/tests/python/pex_loader/testdata/src/sample_pex.pex': One of the files has changed.
+Executing action 'Writing file heron/common/tests/java/SystemConfigTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/java/SysUtilsTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/java/HeronServerTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/java/FileUtilsTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/src/java/liblocal-scheduler-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/src/java/libslurm-scheduler-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/libmesos-tests.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/schedulers/tests/java/libslurm-tests.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/java/EchoTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/java/ConfigReaderTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/java/CommunicatorTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building third_party/java/libyarn.jar (1 source file)': One of the files has changed.
+Executing action 'Writing file heron/common/tests/java/ClusterConfigReaderTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/packing/src/java/libroundrobin-packing.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/cpp/threads/spcountdownlatch_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/cpp/network/switch_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/cpp/network/packet_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/cpp/network/order_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/cpp/network/http_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/cpp/metrics/time-spent-metric_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/cpp/metrics/multi-mean-metric_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/cpp/metrics/multi-count-metric_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/cpp/metrics/mean-metric_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/cpp/metrics/count-metric_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/cpp/errors/module_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/cpp/basics/fileutils_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/cpp/basics/rid_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/cpp/errors/syserrs_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/cpp/basics/strutils_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/instance/src/java/instance-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/cpp/basics/utils_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/java/libcommon-tests.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/common/tests/cpp/errors/errors_unittest-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/schedulers/tests/java/MarathonControllerTest.jar ()': One of the files has changed.
+Executing action 'Building heron/schedulers/tests/java/LocalSchedulerTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/packing/tests/java/ResourceCompliantRRPackingTest.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/schedulers/tests/java/LaunchableTaskTest.jar ()': One of the files has changed.
+Executing action 'Building heron/schedulers/tests/java/HeronMasterDriverTest.jar ()': One of the files has changed.
+Executing action 'Building heron/schedulers/tests/java/DriverOnLocalReefTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/scheduler-core/src/java/scheduler-unshaded.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/schedulers/tests/java/HeronExecutorTaskTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/proto/proto-bin-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Writing file heron/proto/libproto-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'Building heron/schedulers/tests/java/LocalLauncherTest.jar ()': One of the files has changed.
+Executing action 'PexPython heron/pyheron/tests/python/topology_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/pyheron/tests/python/stream_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/instance/tests/python/network/st_stmgrcli_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/instance/tests/python/network/metricsmgr_client_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/common/tests/python/pex_loader/pex_loader_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/common/tests/python/utils/global_metrics_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/common/tests/python/utils/metrics_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/common/tests/python/utils/metrics_helper_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/common/tests/python/utils/serializer_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/common/tests/python/utils/topology_context_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/common/tests/python/utils/py_metrics_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/examples/src/python/custom_grouping.pex': One of the files has changed.
+Executing action 'PexPython heron/common/tests/python/utils/tuple_helper_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/executor/tests/python/executor_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/examples/src/python/multi_stream.pex': One of the files has changed.
+Executing action 'PexPython heron/examples/src/python/half_acking.pex': One of the files has changed.
+Executing action 'PexPython heron/examples/src/python/word_count.pex': One of the files has changed.
+Executing action 'PexPython heron/instance/src/python/instance/heron-python-instance.pex': One of the files has changed.
+Executing action 'PexPython heron/executor/src/python/heron-executor.pex': One of the files has changed.
+Executing action 'PexPython heron/common/tests/python/network/protocol_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/common/tests/python/network/heron_client_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/tools/explorer/src/python/heron-explorer.pex': One of the files has changed.
+Executing action 'PexPython heron/common/tests/python/utils/custom_grouping_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/tools/tracker/tests/python/query_operator_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/tools/tracker/tests/python/topology_helpers_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/common/tests/python/utils/outgoing_tuple_helper_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/tools/tracker/tests/python/topology_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/common/tests/python/basics/gateway_looper_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/common/tests/python/utils/communicator_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/common/tests/python/basics/event_looper_unittest.pex': One of the files has changed.
+Executing action 'Building heron/schedulers/tests/java/AuroraSchedulerTest.jar ()': One of the files has changed.
+Executing action 'Building heron/schedulers/tests/java/AuroraLauncherTest.jar ()': One of the files has changed.
+Executing action 'Building heron/schedulers/tests/java/AuroraControllerTest.jar ()': One of the files has changed.
+Executing action 'Building heron/schedulers/tests/java/AuroraContextTest.jar ()': One of the files has changed.
+Executing action 'Writing file heron/common/src/java/libnetwork-java.jar-2.params': action command has changed (try --verbose_explanations for more info).
+Executing action 'PexPython heron/tools/tracker/tests/python/tracker_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/tools/tracker/tests/python/query_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/common/tests/python/utils/pplan_helper_unittest.pex': One of the files has changed.
+Executing action 'Building heron/scheduler-core/tests/java/SubmitterMainTest.jar ()': One of the files has changed.
+Executing action 'Building heron/scheduler-core/tests/java/UpdateTopologyManagerTest.jar ()': One of the files has changed.
+Executing action 'PexPython heron/tools/tracker/src/python/heron-tracker.pex': One of the files has changed.
+Executing action 'PexPython heron/tools/explorer/tests/python/explorer_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/tools/cli/tests/python/heronparser_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/tools/cli/src/python/heron.pex': One of the files has changed.
+Executing action 'PexPython heron/tools/cli/tests/python/opts_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/statemgrs/tests/python/statemanagerfactory_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/instance/tests/python/basics/bolt_instance_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/statemgrs/tests/python/zkstatemanager_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/pyheron/tests/python/component_unittest.pex': One of the files has changed.
+Executing action 'PexPython heron/statemgrs/tests/python/configloader_unittest.pex': One of the files has changed.
+Executing action 'Building heron/proto/libproto_common_java.jar (1 source jar)': One of the files has changed.
+Executing action 'Building heron/proto/libproto_stats_java.jar (1 source jar)': One of the files has changed.
+Executing action 'Building heron/scheduler-core/tests/java/SchedulerServerTest.jar ()': One of the files has changed.
+Executing action 'Building heron/scheduler-core/tests/java/RuntimeManagerRunnerTest.jar ()': One of the files has changed.
+Executing action 'Building heron/proto/libproto_topology_java.jar (1 source jar)': One of the files has changed.
+Executing action 'Building third_party/java/libprotobuf-java-neverlink.jar (1 source file)': One of the files has changed.
+Executing action 'Building heron/proto/libproto_networktests_java.jar (1 source jar)': One of the files has changed.
+Executing action 'Building heron/proto/libproto_packing_plan_java.jar (1 source jar)': One of the files has changed.
+Executing action 'Building heron/scheduler-core/tests/java/HttpServiceSchedulerClientTest.jar ()': One of the files has changed.
+Executing action 'Building heron/scheduler-core/tests/java/RuntimeManagerMainTest.jar ()': One of the files has changed.
+Executing action 'Building heron/scheduler-core/tests/java/LaunchRunnerTest.jar ()': One of the files has changed.
+Executing action 'Building heron/scheduler-core/tests/java/SchedulerClientFactoryTest.jar ()': One of the files has changed.
+Executing action 'Building heron/scheduler-core/tests/java/LibrarySchedulerClientTest.jar ()': One of the files has changed.
+Executing action 'Building heron/scheduler-core/tests/java/SchedulerMainTest.jar ()': One of the files has changed.
+Executing action 'PexPython heron/tools/ui/src/python/heron-ui.pex': One of the files has changed.
+Executing action 'Building heron/proto/libproto_execution_state_java.jar (1 source jar)': One of the files has changed.
+Executing action 'Building heron/metricsmgr/tests/java/TMasterSinkTest.jar ()': One of the files has changed.
+Executing action 'Building heron/metricsmgr/tests/java/SinkExecutorTest.jar ()': One of the files has changed.
+Executing action 'Building heron/metricsmgr/tests/java/MetricsManagerServerTest.jar ()': One of the files has changed.
+Executing action 'Building heron/metricsmgr/tests/java/HandleTMasterLocationTest.jar ()': One of the files has changed.
+Executing action 'Building heron/metricsmgr/tests/java/FileSinkTest.jar ()': One of the files has changed.
+Executing action 'Building heron/instance/tests/java/SpoutInstanceTest.jar ()': One of the files has changed.
+Executing action 'Building heron/instance/tests/java/MultiAssignableMetricTest.jar ()': One of the files has changed.
+Executing action 'Building heron/instance/tests/java/HandleWriteTest.jar ()': One of the files has changed.
+Executing action 'Building heron/instance/tests/java/HandleReadTest.jar ()': One of the files has changed.
+Executing action 'Building heron/instance/tests/java/GlobalMetricsTest.jar ()': One of the files has changed.
+Executing action 'Building heron/instance/tests/java/CustomGroupingTest.jar ()': One of the files has changed.
+Executing action 'Building heron/instance/tests/java/ConnectTest.jar ()': One of the files has changed.
+Executing action 'Building heron/instance/tests/java/BoltInstanceTest.jar ()': One of the files has changed.
+Executing action 'Building heron/instance/tests/java/ActivateDeactivateTest.jar ()': One of the files has changed.
+Executing action 'Building third_party/java/libjarjar.jar (1 source file)': One of the files has changed.
+Executing action 'Building third_party/java/jarjar/jarjar_bin.jar (1 resource)': One of the files has changed.
+Executing action 'Building heron/common/tests/java/WakeableLooperTest.jar ()': One of the files has changed.
+Executing action 'Building heron/common/tests/java/SystemConfigTest.jar ()': One of the files has changed.
+Executing action 'Building heron/common/tests/java/HeronServerTest.jar ()': One of the files has changed.
+Executing action 'Building heron/common/tests/java/FileUtilsTest.jar ()': One of the files has changed.
+Executing action 'Building heron/common/tests/java/SysUtilsTest.jar ()': One of the files has changed.
+Executing action 'Building heron/common/tests/java/EchoTest.jar ()': One of the files has changed.
+Executing action 'Building heron/common/tests/java/ConfigReaderTest.jar ()': One of the files has changed.
+Executing action 'Building heron/common/tests/java/CommunicatorTest.jar ()': One of the files has changed.
+Executing action 'Building heron/common/tests/java/ClusterConfigReaderTest.jar ()': One of the files has changed.
+Executing action 'Building heron/metricsmgr/src/thrift/libthrift_scribe_java.jar (1 source jar)': One of the files has changed.
+Executing action 'Linking heron/common/tests/cpp/basics/rid_unittest': One of the files has changed.
+Executing action 'Linking heron/common/tests/cpp/basics/strutils_unittest': One of the files has changed.
+Executing action 'Linking heron/common/tests/cpp/basics/utils_unittest': One of the files has changed.
+Executing action 'Linking heron/common/tests/cpp/basics/fileutils_unittest': One of the files has changed.
+Executing action 'Building third_party/java/libaws-java-sdk.jar (1 source file)': One of the files has changed.
+Executing action 'Linking heron/common/tests/cpp/errors/syserrs_unittest': One of the files has changed.
+Executing action 'Extracting interface //heron/api/src/java:classification': One of the files has changed.
+Executing action 'Linking heron/common/tests/cpp/threads/spcountdownlatch_unittest': One of the files has changed.
+Executing action 'Linking heron/common/tests/cpp/errors/module_unittest': One of the files has changed.
+Executing action 'Linking heron/common/tests/cpp/errors/errors_unittest': One of the files has changed.
+Executing action 'Linking heron/common/tests/cpp/metrics/count-metric_unittest': One of the files has changed.
+Executing action 'Linking heron/tmaster/tests/cpp/server/tmaster_unittest': One of the files has changed.
+Executing action 'Linking heron/stmgr/tests/cpp/util/xor-manager_unittest': One of the files has changed.
+Executing action 'Linking heron/tmaster/src/cpp/heron-tmaster': One of the files has changed.
+Executing action 'Linking heron/stmgr/tests/cpp/grouping/shuffle-grouping_unittest': One of the files has changed.
+Executing action 'Linking heron/stmgr/tests/cpp/util/rotating-map_unittest': One of the files has changed.
+Executing action 'Linking heron/stmgr/tests/cpp/util/tuple-cache_unittest': One of the files has changed.
+Executing action 'Linking heron/stmgr/tests/cpp/server/stmgr_unittest': One of the files has changed.
+Executing action 'Linking heron/stmgr/tests/cpp/grouping/lowest-grouping_unittest': One of the files has changed.
+Executing action 'Linking heron/stmgr/tests/cpp/grouping/custom-grouping_unittest': One of the files has changed.
+Executing action 'Linking heron/stmgr/tests/cpp/grouping/fields-grouping_unittest': One of the files has changed.
+Executing action 'Linking heron/stmgr/tests/cpp/grouping/all-grouping_unittest': One of the files has changed.
+Executing action 'Linking heron/stmgr/src/cpp/heron-stmgr': One of the files has changed.
+Executing action 'Linking heron/statemgrs/tests/cpp/zk-statemgr_unittest': One of the files has changed.
+Executing action 'Linking heron/common/tests/cpp/network/packet_unittest': One of the files has changed.
+Executing action 'Linking heron/common/tests/cpp/network/switch_unittest': One of the files has changed.
+Executing action 'Linking heron/common/tests/cpp/network/http_unittest': One of the files has changed.
+Executing action 'Linking heron/common/tests/cpp/network/order_unittest': One of the files has changed.
+Executing action 'Linking heron/common/tests/cpp/metrics/time-spent-metric_unittest': One of the files has changed.
+Executing action 'Linking heron/common/tests/cpp/metrics/multi-mean-metric_unittest': One of the files has changed.
+Executing action 'Linking heron/common/tests/cpp/metrics/multi-count-metric_unittest': One of the files has changed.
+Executing action 'Extracting interface //heron/spi/src/java:shell-utils-java': One of the files has changed.
+Executing action 'Linking heron/common/tests/cpp/metrics/mean-metric_unittest': One of the files has changed.
+Executing action 'Extracting interface //heron/spi/src/java:metricsmgr-spi-java': One of the files has changed.

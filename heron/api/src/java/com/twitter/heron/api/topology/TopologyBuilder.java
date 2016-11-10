@@ -82,8 +82,6 @@ public class TopologyBuilder {
 
 
   public HeronTopology createTopology() {
-    // Comment 2
-    System.out.println("Just an edit2 ");
     TopologyAPI.Topology.Builder bldr = TopologyAPI.Topology.newBuilder();
     // First go thru the spouts
     for (Map.Entry<String, SpoutDeclarer> spout : spouts.entrySet()) {

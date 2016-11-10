@@ -22,6 +22,7 @@ package org.apache.storm.topology;
 // import org.apache.storm.grouping.CustomStreamGrouping;
 
 import org.apache.storm.generated.StormTopology;
+import org.apache.storm.graph.Graph;
 
 import com.twitter.heron.api.HeronTopology;
 
@@ -30,6 +31,7 @@ public class TopologyBuilder {
       new com.twitter.heron.api.topology.TopologyBuilder();
 
   public StormTopology createTopology() {
+    Graph g = new Graph();
     HeronTopology topology = delegate.createTopology();
     return new StormTopology(topology);
   }
