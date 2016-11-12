@@ -15,7 +15,7 @@ api="heron-api"
 spi="heron-spi"
 storm="heron-storm"
 
-myheron_home="/home/amir/Projects/myheron/heron"
+myheron_home="/home/amir/Projects/heron/myheron/heron"
 
 myheron_pkgs_dir="bazel-bin/scripts/packages"
 maven_api_dir="/home/amir/.m2/repository/com/twitter/heron/$api/$version"
@@ -30,14 +30,14 @@ bazel build  --config=ubuntu heron/...
 check_failure "compile"
 
 echo "-@@@-clearing heron packages directory..."
-rm -rf "/home/amir/Projects/myheron/heron/bazel-bin/scripts/packages/*"
+rm -rf "$myheron_home/$myheron_pkgs_dir/*"
 
 echo "-@@@-start building tar packages..."
 bazel build --config=ubuntu scripts/packages:tarpkgs
 check_failure "build tarpkgs"
 
 
-tar -xzf "$myheron_home/$myheron_pkgs_dir/$api.tar.gz" -C $myheron_pkgs_dir
+tar -xzf "$myheron_home/$myheron_pkgs_dir/$api.tar.gz" -C "$myheron_home/$myheron_pkgs_dir"
 check_failure "unzip tarpkgs"
 
 

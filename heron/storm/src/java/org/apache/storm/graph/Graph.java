@@ -1,42 +1,22 @@
-//  Copyright 2016 Twitter. All rights reserved.
-//
-//  Licensed under the Apache License, Version 2.0 (the "License");
-//  you may not use this file except in compliance with the License.
-//  You may obtain a copy of the License at
-//
-//  http://www.apache.org/licenses/LICENSE-2.0
-//
-//  Unless required by applicable law or agreed to in writing, software
-//  distributed under the License is distributed on an "AS IS" BASIS,
-//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-//  See the License for the specific language governing permissions and
-//  limitations under the License
-package org.apache.storm.graph;//  Copyright 2016 Twitter. All rights reserved.
-//
-//  Licensed under the Apache License, Version 2.0 (the "License");
-//  you may not use this file except in compliance with the License.
-//  You may obtain a copy of the License at
-//
-//  http://www.apache.org/licenses/LICENSE-2.0
-//
-//  Unless required by applicable law or agreed to in writing, software
-//  distributed under the License is distributed on an "AS IS" BASIS,
-//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-//  See the License for the specific language governing permissions and
-//  limitations under the License
 /**
- * Undirected, unweighted simple graph data type
- * <p>
- * Notes:
- * <ul>
- * <li> Parallel edges are not allowed
- * <li> Self loops are allowed
- * </ul>
- * <p>
- * This Graph class was adapted from
- * <a href="http://www.cs.princeton.edu/introcs/45graph/Graph.java">Graph.java</a> by
- * by Robert Sedgewick and Kevin Wayne
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
+
+package org.apache.storm.graph;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -65,8 +45,7 @@ public class Graph {
   /**
    * Add a new vertex name with no neighbors (if vertex does not yet exist)
    *
-   * @param name
-   *            vertex to be added
+   * @param name vertex to be added
    */
   public Vertex addVertex(String name) {
     Vertex v;
@@ -82,6 +61,7 @@ public class Graph {
 
   /**
    * Returns the Vertex matching v
+   *
    * @param name a String name of a Vertex that may be in
    * this Graph
    * @return the Vertex with a name that matches v or null
@@ -93,6 +73,7 @@ public class Graph {
 
   /**
    * Returns true iff v is in this Graph, false otherwise
+   *
    * @param name a String name of a Vertex that may be in
    * this Graph
    * @return true iff v is in this Graph
@@ -105,14 +86,16 @@ public class Graph {
    * Is from-to, an edge in this Graph. The graph is
    * undirected so the order of from and to does not
    * matter.
+   *
    * @param from the name of the first Vertex
    * @param to the name of the second Vertex
    * @return true iff from-to exists in this Graph
    */
   public boolean hasEdge(String from, String to) {
 
-    if (!hasVertex(from) || !hasVertex(to))
+    if (!hasVertex(from) || !hasVertex(to)) {
       return false;
+    }
     String edgeName = from + ">" + to;
     return myAdjList.get(myVertices.get(from)).contains(myVertices.get(to));
   }
@@ -128,6 +111,7 @@ public class Graph {
    * Add to to from's set of neighbors, and add from to to's
    * set of neighbors. Does not add an edge if another edge
    * already exists
+   *
    * @param from the name of the first Vertex
    * @param to the name of the second Vertex
    */
@@ -135,17 +119,21 @@ public class Graph {
   public Edge addEdge(String from, String to) {
     Edge e = new Edge(from, to);
     myEdges.put(e.getName(), e);
-    Vertex src, dest;
-    if (hasEdge(from, to))
+    Vertex src;
+    Vertex dest;
+    if (hasEdge(from, to)) {
       return e;
+    }
     myNumEdges += 1;
 
     src = getVertex(from);
-    if (src == null)
+    if (src == null) {
       src = addVertex(from);
+    }
     dest = getVertex(to);
-    if (dest == null)
+    if (dest == null) {
       dest = addVertex(to);
+    }
 
     myAdjList.get(src).add(dest);
     myAdjList.get(dest).add(src);
@@ -156,17 +144,21 @@ public class Graph {
   public Edge addEdge(String from, String to, String[] edgeWeights) {
     Edge e = new Edge(from, to, edgeWeights);
     myEdges.put(e.getName(), e);
-    Vertex src, dest;
-    if (hasEdge(from, to))
+    Vertex src;
+    Vertex dest;
+    if (hasEdge(from, to)) {
       return e;
+    }
     myNumEdges += 1;
 
     src = getVertex(from);
-    if (src == null)
+    if (src == null) {
       src = addVertex(from);
+    }
     dest = getVertex(to);
-    if (dest == null)
+    if (dest == null) {
       dest = addVertex(to);
+    }
 
     myAdjList.get(src).add(dest);
     myAdjList.get(dest).add(src);
@@ -175,30 +167,35 @@ public class Graph {
 
   /**
    * Return an iterator over the neighbors of Vertex named v
+   *
    * @param name the String name of a Vertex
    * @return an Iterator over Vertices that are adjacent
    * to the Vertex named v, empty set if v is not in graph
    */
   public Iterable<Vertex> adjacentTo(String name) {
-    if (!hasVertex(name))
+    if (!hasVertex(name)) {
       return EMPTY_SET;
+    }
     return myAdjList.get(getVertex(name));
   }
 
   /**
    * Return an iterator over the neighbors of Vertex v
+   *
    * @param v the Vertex
    * @return an Iterator over Vertices that are adjacent
    * to the Vertex v, empty set if v is not in graph
    */
   public Iterable<Vertex> adjacentTo(Vertex v) {
-    if (!myAdjList.containsKey(v))
+    if (!myAdjList.containsKey(v)) {
       return EMPTY_SET;
+    }
     return myAdjList.get(v);
   }
 
   /**
    * Returns an Iterator over all Vertices in this Graph
+   *
    * @return an Iterator over all Vertices in this Graph
    */
   public Iterable<Vertex> getVertices() {
@@ -255,7 +252,7 @@ public class Graph {
 
     String str = "";
     for (Vertex v : this.getVertices()) {
-      str +=String.format("%s%s: ", v, v.getWeightsString());
+      str += String.format("%s%s: ", v, v.getWeightsString());
 
       for (Vertex w : this.adjacentTo(v.name)) {
         Edge e = this.getEdge(v.name, w.name);
@@ -290,18 +287,19 @@ public class Graph {
       }
       out.write("edgedef> node1,node2,color\n");
       // write edges
-      for (Vertex v : myVertices.values())
-        for (Vertex w : myAdjList.get(v))
+      for (Vertex v : myVertices.values()) {
+        for (Vertex w : myAdjList.get(v)) {
           if (v.compareTo(w) < 0) {
-            out.write(idToName.get(v) + "," +
-                idToName.get(w) + ",");
-            if (v.predecessor == w ||
-                w.predecessor == v)
+            out.write(idToName.get(v) + "," + idToName.get(w) + ",");
+            if (v.predecessor == w || w.predecessor == v) {
               out.write("blue");
-            else
+            } else {
               out.write("gray");
+            }
             out.write("\n");
           }
+        }
+      }
       out.close();
     } catch (IOException e) {
       e.printStackTrace();
