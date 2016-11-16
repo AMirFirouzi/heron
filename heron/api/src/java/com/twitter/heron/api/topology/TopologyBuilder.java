@@ -15,6 +15,7 @@
 package com.twitter.heron.api.topology;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.twitter.heron.api.Config;
@@ -110,8 +111,9 @@ public class TopologyBuilder {
 
     int boltParallelism;
     //Add Bolts
+    List<TopologyAPI.Bolt> blts = bldr.getBoltsList();
     for (TopologyAPI.BoltOrBuilder bolt
-        : bldr.getBoltsList()) {
+        : blts) {
       boltParallelism = Integer.parseInt(getBoltParallelism(bolt));
       for (int i = 1; i <= boltParallelism; i++) {
         g.addVertex(bolt.getComp().getName() + "-" + Integer.toString(i));
@@ -121,10 +123,13 @@ public class TopologyBuilder {
     for (TopologyAPI.BoltOrBuilder bolt
         : bldr.getBoltsList()) {
 
-      for (TopologyAPI.InputStream input
-          : bolt.getInputsList()) {
-        //input
-      }
+//      for (TopologyAPI.InputStream input
+//          : bolt.getInputsList()) {
+//        int source_parallelism;
+//        if(spouts.containsKey(input.getStream().getComponentName().toString())){
+//          source_parallelism = getSpoutParallelism(input.toBuilder());
+//        }
+//      }
     }
 
     return new HeronTopology(bldr);
