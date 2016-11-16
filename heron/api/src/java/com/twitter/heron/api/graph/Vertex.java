@@ -6,9 +6,9 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- *
+ * <p>
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package org.apache.storm.graph;
+package com.twitter.heron.api.graph;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,14 +26,29 @@ public class Vertex implements Comparable<Vertex> {
   /**
    * label for Vertex
    */
-  public String name;
+  private String name;
+  private int id;
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
   /**
    * length of shortest path from source
    */
   public int distance;
-  /**
-   * previous vertex on path from sourxe
-   */
 
   /**
    * weights of vertex
@@ -84,6 +99,13 @@ public class Vertex implements Comparable<Vertex> {
     return this.weights;
   }
 
+  public List<String> getWeights(int numOfItems) throws Exception {
+    if (numOfItems > this.getWeights().size()) {
+      throw new Exception("ncon OutOfBoundException");
+    }
+    return this.weights.subList(0, numOfItems);
+  }
+
   public String getWeightsString() {
     String vw = "";
     if (!weights.isEmpty()) {
@@ -94,6 +116,25 @@ public class Vertex implements Comparable<Vertex> {
     }
     if (!vw.isEmpty()) {
       vw = vw.substring(0, vw.length() - 1) + ")";
+    }
+    return vw;
+  }
+
+  public String getWeightsString(int numOfItems) {
+    return this.getWeightsString(numOfItems, true);
+  }
+
+  public String getWeightsString(int numOfItems, boolean punctuation) {
+    String vw = "";
+    if ((!weights.isEmpty()) && punctuation) {
+      vw = "(";
+    }
+    for (Object s : this.weights.subList(0, numOfItems)) {
+      vw += s.toString() + (punctuation ? "," : " ");
+    }
+    if (!vw.isEmpty()) {
+      vw = vw.substring(0, vw.length() - 1)
+          + (((!weights.isEmpty()) && punctuation && (numOfItems > 0)) ? ")" : "");
     }
     return vw;
   }
@@ -115,3 +156,4 @@ public class Vertex implements Comparable<Vertex> {
     }
   }
 }
+

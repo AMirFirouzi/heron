@@ -6,9 +6,9 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- *
+ * <p>
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -16,11 +16,7 @@
  * limitations under the License.
  */
 
-package org.apache.storm.graph;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+package com.twitter.heron.api.graph;
 
 /**
  * Created by amir on 11/9/16.
@@ -33,20 +29,13 @@ public class Edge {
 
   private String dest;
 
-  private List<String> weights;
+  private String weight;
 
   public Edge(String src, String dest) {
     this.src = src;
     this.dest = dest;
     this.name = src + ">" + dest;
-    weights = new ArrayList<String>();
-  }
-
-  public Edge(String src, String dest, String[] vertexWeights) {
-    this.src = src;
-    this.dest = dest;
-    this.name = src + " > " + dest;
-    addWeights(vertexWeights);
+    weight = "";
   }
 
   public String getName() {
@@ -73,29 +62,24 @@ public class Edge {
     this.dest = dest;
   }
 
-  public List<String> getWeights() {
-    return weights;
+  public void setWeight(String edgeWeights) {
+    this.weight = edgeWeights;
   }
 
-  public String getWeightsString() {
+  public String getWeight() {
+    return weight;
+  }
+
+  public String getWeightString() {
+    return this.getWeightString(true);
+  }
+
+  public String getWeightString(boolean punctuation) {
     String ew = "";
-    if (!weights.isEmpty()) {
-      ew = "-(";
-    }
-    for (Object s : this.weights) {
-      ew += s.toString() + ",";
-    }
-    if (!ew.isEmpty()) {
-      ew = ew.substring(0, ew.length() - 1) + ")";
+    if (!weight.isEmpty()) {
+      ew = (punctuation ? "-(" : "") + this.weight.toString() + (punctuation ? ")" : "");
     }
     return ew;
   }
 
-  public void addWeights(List<String> vertexWeights) {
-    this.weights = vertexWeights;
-  }
-
-  public void addWeights(String[] vertexWeights) {
-    this.weights = Arrays.asList(vertexWeights);
-  }
 }
