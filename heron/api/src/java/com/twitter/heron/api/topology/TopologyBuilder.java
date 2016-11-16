@@ -160,7 +160,8 @@ public class TopologyBuilder {
   /**
    * Define a new bolt in this topology with parallelism of just one thread.
    *
-   * @param id the id of this component. This id is referenced by other components that want to consume this bolt's outputs.
+   * @param id the id of this component. This id is referenced by other components that want to
+   * consume this bolt's outputs.
    * @param bolt the bolt
    * @return use the returned object to declare the inputs to this component
    */
@@ -171,9 +172,11 @@ public class TopologyBuilder {
   /**
    * Define a new bolt in this topology with the specified amount of parallelism.
    *
-   * @param id the id of this component. This id is referenced by other components that want to consume this bolt's outputs.
+   * @param id the id of this component. This id is referenced by other components that want to
+   * consume this bolt's outputs.
    * @param bolt the bolt
-   * @param parallelismHint the number of tasks that should be assigned to execute this bolt. Each task will run on a thread in a process somewhere around the cluster.
+   * @param parallelismHint the number of tasks that should be assigned to execute this bolt.
+   * Each task will run on a thread in a process somewhere around the cluster.
    * @return use the returned object to declare the inputs to this component
    */
   public BoltDeclarer setBolt(String id, IRichBolt bolt, Number parallelismHint) {
@@ -189,7 +192,8 @@ public class TopologyBuilder {
    * for non-aggregation processing and automate the anchoring/acking process to
    * achieve proper reliability in the topology.
    *
-   * @param id the id of this component. This id is referenced by other components that want to consume this bolt's outputs.
+   * @param id the id of this component. This id is referenced by other components that want to
+   * consume this bolt's outputs.
    * @param bolt the basic bolt
    * @return use the returned object to declare the inputs to this component
    */
@@ -203,9 +207,11 @@ public class TopologyBuilder {
    * for non-aggregation processing and automate the anchoring/acking process to
    * achieve proper reliability in the topology.
    *
-   * @param id the id of this component. This id is referenced by other components that want to consume this bolt's outputs.
+   * @param id the id of this component. This id is referenced by other components that want to
+   * consume this bolt's outputs.
    * @param bolt the basic bolt
-   * @param parallelismHint the number of tasks that should be assigned to execute this bolt. Each task will run on a thread in a process somwehere around the cluster.
+   * @param parallelismHint the number of tasks that should be assigned to execute this bolt.
+   * Each task will run on a thread in a process somwehere around the cluster.
    * @return use the returned object to declare the inputs to this component
    */
   public BoltDeclarer setBolt(String id, IBasicBolt bolt, Number parallelismHint) {
@@ -215,7 +221,8 @@ public class TopologyBuilder {
   /**
    * Define a new spout in this topology.
    *
-   * @param id the id of this component. This id is referenced by other components that want to consume this spout's outputs.
+   * @param id the id of this component. This id is referenced by other components that want to
+   * consume this spout's outputs.
    * @param spout the spout
    */
   public SpoutDeclarer setSpout(String id, IRichSpout spout) {
@@ -227,8 +234,10 @@ public class TopologyBuilder {
    * itself as non-distributed, the parallelismHint will be ignored and only one task
    * will be allocated to this component.
    *
-   * @param id the id of this component. This id is referenced by other components that want to consume this spout's outputs.
-   * @param parallelismHint the number of tasks that should be assigned to execute this spout. Each task will run on a thread in a process somwehere around the cluster.
+   * @param id the id of this component. This id is referenced by other components that want to
+   * consume this spout's outputs.
+   * @param parallelismHint the number of tasks that should be assigned to execute this spout.
+   * Each task will run on a thread in a process somwehere around the cluster.
    * @param spout the spout
    */
   public SpoutDeclarer setSpout(String id, IRichSpout spout, Number parallelismHint) {
