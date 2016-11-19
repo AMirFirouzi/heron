@@ -16,7 +16,6 @@ package com.twitter.heron.api.topology;
 
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 
 import com.twitter.heron.api.Config;
@@ -99,8 +98,9 @@ public class TopologyBuilder {
     for (Map.Entry<String, BoltDeclarer> bolt : bolts.entrySet()) {
       bolt.getValue().dump(bldr);
     }
+
+    //Add Vertices for Spouts
     int spoutParallelism;
-    //Add Spouts
     for (TopologyAPI.SpoutOrBuilder spout
         : bldr.getSpoutsList()) {
       spoutParallelism = Integer.parseInt(getParallelism(spout));
@@ -110,38 +110,29 @@ public class TopologyBuilder {
     }
 
     int boltParallelism;
-    //Add Bolts
-    List<TopologyAPI.Bolt> blts = bldr.getBoltsList();
-    for (TopologyAPI.BoltOrBuilder bolt
-        : blts) {
-      boltParallelism = Integer.parseInt(getParallelism(bolt));
-      for (int i = 1; i <= boltParallelism; i++) {
-        g.addVertex(bolt.getComp().getName() + "-" + Integer.toString(i));
-      }
-    }
-
-    //Add Edges Between each Component and its sub-tasks(considering number of instances)
-    Iterator<TopologyAPI.Bolt> bolt = bldr.getBoltsList().iterator();
+    //Add Vertices for Bolts, then Add Edges Between Components(spouts->bolts and bolts->bolts)
+    //and their sub-tasks(considering number of instances)
+    Iterator<TopologyAPI.Bolt> bolt =
+        bldr.getBoltsList().iterator();
     while (bolt.hasNext()) {
       TopologyAPI.Bolt currentBolt = bolt.next();
-      List<TopologyAPI.InputStream> inputs = currentBolt.getInputsList();
-      for (TopologyAPI.InputStream input
-          : inputs) {
-        Object component = getComponent(input.getStream().getComponentName(), bldr);
-        int sourceParallelism = Integer.parseInt(getParallelism(component));
-        int destParallelism = Integer.parseInt(getParallelism(currentBolt));
-        for (int i = 1; i <= sourceParallelism; i++) {
-          for (int j = 1; j <= destParallelism; j++) {
+      boltParallelism = Integer.parseInt(getParallelism(currentBolt));
+      for (int i = 1; i <= boltParallelism; i++) {
+        g.addVertex(currentBolt.getComp().getName() + "-" + Integer.toString(i));
+        for (TopologyAPI.InputStream input
+            : currentBolt.getInputsList()) {
+          Object component = getComponent(input.getStream().getComponentName(), bldr);
+          int sourceParallelism = Integer.parseInt(getParallelism(component));
+          for (int j = 1; j <= sourceParallelism; j++) {
             g.addEdge(input.getStream().getComponentName()
-                + "-" + Integer.toString(i), currentBolt.getComp().getName()
-                + "-" + Integer.toString(j));
+                + "-" + Integer.toString(j), currentBolt.getComp().getName()
+                + "-" + Integer.toString(i));
           }
         }
-
       }
     }
-
     return new HeronTopology(bldr);
+
   }
 
   private Object getComponent(String componentName, TopologyAPI.Topology.Builder builder) {
@@ -182,17 +173,6 @@ public class TopologyBuilder {
         if (config.getKey() == Config.TOPOLOGY_COMPONENT_PARALLELISM) {
           parallelism = config.getValue();
         }
-      }
-    }
-    return parallelism;
-  }
-
-  private String getBoltParallelism(TopologyAPI.BoltOrBuilder bolt) {
-    String parallelism = "";
-    for (TopologyAPI.Config.KeyValue config
-        : bolt.getComp().getConfig().getKvsList()) {
-      if (config.getKey() == Config.TOPOLOGY_COMPONENT_PARALLELISM) {
-        parallelism = config.getValue();
       }
     }
     return parallelism;
