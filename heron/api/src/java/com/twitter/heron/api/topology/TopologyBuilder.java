@@ -15,6 +15,7 @@
 package com.twitter.heron.api.topology;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -98,12 +99,11 @@ public class TopologyBuilder {
     for (Map.Entry<String, BoltDeclarer> bolt : bolts.entrySet()) {
       bolt.getValue().dump(bldr);
     }
-
     int spoutParallelism;
     //Add Spouts
     for (TopologyAPI.SpoutOrBuilder spout
         : bldr.getSpoutsList()) {
-      spoutParallelism = Integer.parseInt(getSpoutParallelism(spout));
+      spoutParallelism = Integer.parseInt(getParallelism(spout));
       for (int i = 1; i <= spoutParallelism; i++) {
         g.addVertex(spout.getComp().getName() + "-" + Integer.toString(i));
       }
@@ -114,33 +114,74 @@ public class TopologyBuilder {
     List<TopologyAPI.Bolt> blts = bldr.getBoltsList();
     for (TopologyAPI.BoltOrBuilder bolt
         : blts) {
-      boltParallelism = Integer.parseInt(getBoltParallelism(bolt));
+      boltParallelism = Integer.parseInt(getParallelism(bolt));
       for (int i = 1; i <= boltParallelism; i++) {
         g.addVertex(bolt.getComp().getName() + "-" + Integer.toString(i));
       }
     }
 
-    for (TopologyAPI.BoltOrBuilder bolt
-        : bldr.getBoltsList()) {
+    Iterator<TopologyAPI.Bolt> bolt = bldr.getBoltsList().iterator();
 
-//      for (TopologyAPI.InputStream input
-//          : bolt.getInputsList()) {
-//        int source_parallelism;
-//        if(spouts.containsKey(input.getStream().getComponentName().toString())){
-//          source_parallelism = getSpoutParallelism(input.toBuilder());
-//        }
-//      }
+    while (bolt.hasNext()) {
+      TopologyAPI.Bolt currentBolt = bolt.next();
+      List<TopologyAPI.InputStream> inputs = currentBolt.getInputsList();
+      for (TopologyAPI.InputStream input
+          : inputs) {
+        Object component = getComponent(input.getStream().getComponentName(), bldr);
+        int sourceParallelism = Integer.parseInt(getParallelism(component));
+        int destParallelism = Integer.parseInt(getParallelism(currentBolt));
+        for (int i = 1; i <= sourceParallelism; i++) {
+          for (int j = 1; j <= destParallelism; j++) {
+            g.addEdge(input.getStream().getComponentName()
+                + "-" + Integer.toString(i), currentBolt.getComp().getName()
+                + "-" + Integer.toString(j));
+          }
+        }
+
+      }
     }
 
     return new HeronTopology(bldr);
   }
 
-  private String getSpoutParallelism(TopologyAPI.SpoutOrBuilder spout) {
+  private Object getComponent(String componentName, TopologyAPI.Topology.Builder builder) {
+    for (TopologyAPI.SpoutOrBuilder spout
+        : builder.getSpoutsList()) {
+      if (spout.getComp().getName().equals(componentName)) {
+        return spout;
+      }
+    }
+    for (TopologyAPI.BoltOrBuilder bolt
+        : builder.getBoltsList()) {
+      if (bolt.getComp().getName().equals(componentName)) {
+        return bolt;
+      }
+    }
+    return null;
+  }
+
+  private String getParallelism(Object component) {
+    if (component.equals(null)) {
+      return "0";
+    }
+    String className = component.getClass().getSimpleName();
     String parallelism = "";
-    for (TopologyAPI.Config.KeyValue config
-        : spout.getComp().getConfig().getKvsList()) {
-      if (config.getKey() == Config.TOPOLOGY_COMPONENT_PARALLELISM) {
-        parallelism = config.getValue();
+
+    if (className.toString().equals("Spout")) {
+      TopologyAPI.SpoutOrBuilder spout = (TopologyAPI.SpoutOrBuilder) component;
+      for (TopologyAPI.Config.KeyValue config
+          : spout.getComp().getConfig().getKvsList()) {
+        if (config.getKey() == Config.TOPOLOGY_COMPONENT_PARALLELISM) {
+          parallelism = config.getValue();
+        }
+      }
+    } else if (className.toString().equals("Bolt")) {
+      TopologyAPI.BoltOrBuilder bolt = (TopologyAPI.BoltOrBuilder) component;
+      for (TopologyAPI.Config.KeyValue config
+          : bolt.getComp().getConfig().getKvsList()) {
+        if (config.getKey() == Config.TOPOLOGY_COMPONENT_PARALLELISM) {
+          parallelism = config.getValue();
+        }
       }
     }
     return parallelism;
