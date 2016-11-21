@@ -47,11 +47,25 @@ filegroup(
 )
 
 filegroup(
+    name = "tarpkgs-api",
+    srcs = [
+        ":heron-api",
+    ],
+)
+
+filegroup(
     name = "binpkgs",
     srcs = [
         ":heron-api-install.sh",
         ":heron-client-install.sh",
         ":heron-tools-install.sh",
+    ],
+)
+
+filegroup(
+    name = "binpkgs-api",
+    srcs = [
+        ":heron-api-install.sh",
     ],
 )
 

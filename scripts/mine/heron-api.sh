@@ -10,6 +10,8 @@ check_failure() {
   fi
 }
 
+module="$1"
+
 version="0.14.4"
 api="heron-api"
 spi="heron-spi"
@@ -26,16 +28,26 @@ echo "-@@@-changing directory to myheron..."
 cd $myheron_home
 
 echo "-@@@-start compiling heron..."
-bazel build  --config=ubuntu heron/...
-check_failure "compile"
+if [ $module=="api" ]; then
+  bazel build  --config=ubuntu heron/api/src/java:heron-api
+  check_failure "compile"
+  
+  echo "-@@@-clearing heron packages directory..."
+  rm -rf "$myheron_home/$myheron_pkgs_dir/*"
 
-echo "-@@@-clearing heron packages directory..."
-rm -rf "$myheron_home/$myheron_pkgs_dir/*"
+  echo "-@@@-start building tar packages..."
+  bazel build --config=ubuntu scripts/packages:tarpkgs-api
+  check_failure "build tarpkgs"
+else
+  bazel build  --config=ubuntu heron/...
+  check_failure "compile"
+  echo "-@@@-clearing heron packages directory..."
+  rm -rf "$myheron_home/$myheron_pkgs_dir/*"
 
-echo "-@@@-start building tar packages..."
-bazel build --config=ubuntu scripts/packages:tarpkgs
-check_failure "build tarpkgs"
-
+  echo "-@@@-start building tar packages..."
+  bazel build --config=ubuntu scripts/packages:tarpkgs
+  check_failure "build tarpkgs"
+fi
 
 tar -xzf "$myheron_home/$myheron_pkgs_dir/$api.tar.gz" -C "$myheron_home/$myheron_pkgs_dir"
 check_failure "unzip tarpkgs"
