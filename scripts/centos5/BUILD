@@ -8,8 +8,8 @@ filegroup(
     name = "tarpkgs",
     srcs = [
         ":heron-api",
-        ":heron-core",
         ":heron-client",
+        ":heron-core",
         ":heron-tools",
     ],
 )
@@ -421,7 +421,7 @@ genrule(
     srcs = [
         ":release.yaml",
         "//scripts/packages:api-template-bin.sh",
-        "//scripts/packages:bin-common.sh"
+        "//scripts/packages:bin-common.sh",
     ],
     outs = ["api_launcher_bin.sh"],
     cmd = """
@@ -437,7 +437,7 @@ genrule(
     srcs = [
         ":release.yaml",
         "//scripts/packages:client-template-bin.sh",
-        "//scripts/packages:bin-common.sh"
+        "//scripts/packages:bin-common.sh",
     ],
     outs = ["client_launcher_bin.sh"],
     cmd = """
@@ -453,7 +453,7 @@ genrule(
     srcs = [
         ":release.yaml",
         "//scripts/packages:tools-template-bin.sh",
-        "//scripts/packages:bin-common.sh"
+        "//scripts/packages:bin-common.sh",
     ],
     outs = ["tools_launcher_bin.sh"],
     cmd = """

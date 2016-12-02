@@ -34,74 +34,98 @@ yarn_deps_files = \
 
 mesos_deps_files = \
     scheduler_deps_files + [
-       "//third_party/java:jackson",
-       "@org_apache_mesos_mesos//jar",
-       "@org_apache_curator_curator_client//jar",
-       "@org_apache_curator_curator_framework//jar",
-       "@org_apache_zookeeper_zookeeper//jar",
-   ]
+        "//third_party/java:jackson",
+        "@org_apache_mesos_mesos//jar",
+        "@org_apache_curator_curator_client//jar",
+        "@org_apache_curator_curator_framework//jar",
+        "@org_apache_zookeeper_zookeeper//jar",
+    ]
 
 marathon_deps_files = \
     scheduler_deps_files + [
-       "//third_party/java:jackson",
+        "//third_party/java:jackson",
     ]
 
 java_library(
-    name='local-scheduler-java',
+    name = "local-scheduler-java",
     srcs = glob(["**/local/*.java"]),
-    deps = scheduler_deps_files,
     resources = glob(["**/local/*.yaml"]),
+    deps = scheduler_deps_files,
 )
 
 java_binary(
-    name='local-scheduler-unshaded',
+    name = "local-scheduler-unshaded",
     srcs = glob(["**/local/*.java"]),
-    deps = scheduler_deps_files,
     resources = glob(["**/local/*.yaml"]),
+    deps = scheduler_deps_files,
 )
 
 genrule(
     name = "heron-local-scheduler",
     srcs = [":local-scheduler-unshaded_deploy.jar"],
     outs = ["heron-local-scheduler.jar"],
-    cmd  = "cp $< $@",
+    cmd = "cp $< $@",
 )
 
+#my custom scheduler
 java_library(
-    name='aurora-scheduler-java',
-    srcs = glob(["**/aurora/*.java"]),
+    name = "amirlocal-scheduler-java",
+    srcs = glob(["**/amirlocal/*.java"]),
+    resources = glob(["**/amirlocal/*.yaml"]),
     deps = scheduler_deps_files,
-    resources = glob(["**/aurora/*.aurora"]),
 )
 
 java_binary(
-    name='aurora-scheduler-unshaded',
-    srcs = glob(["**/aurora/*.java"]),
+    name = "amirlocal-scheduler-unshaded",
+    srcs = glob(["**/amirlocal/*.java"]),
+    resources = glob(["**/amirlocal/*.yaml"]),
     deps = scheduler_deps_files,
+)
+
+genrule(
+    name = "heron-amirlocal-scheduler",
+    srcs = [":amirlocal-scheduler-unshaded_deploy.jar"],
+    outs = ["heron-amirlocal-scheduler.jar"],
+    cmd = "cp $< $@",
+)
+
+java_library(
+    name = "aurora-scheduler-java",
+    srcs = glob(["**/aurora/*.java"]),
     resources = glob(["**/aurora/*.aurora"]),
+    deps = scheduler_deps_files,
+)
+
+java_binary(
+    name = "aurora-scheduler-unshaded",
+    srcs = glob(["**/aurora/*.java"]),
+    resources = glob(["**/aurora/*.aurora"]),
+    deps = scheduler_deps_files,
 )
 
 genrule(
     name = "heron-aurora-scheduler",
     srcs = [":aurora-scheduler-unshaded_deploy.jar"],
     outs = ["heron-aurora-scheduler.jar"],
-    cmd  = "cp $< $@",
+    cmd = "cp $< $@",
 )
 
 java_library(
-    name='null-scheduler-java',
+    name = "null-scheduler-java",
     srcs = glob(
-        ["**/NullLauncher.java"] +
-        ["**/NullScheduler.java"]
+        ["**/NullLauncher.java"] + [
+            "**/NullScheduler.java",
+        ],
     ),
     deps = scheduler_deps_files,
 )
 
 java_binary(
-    name='null-scheduler-unshaded',
+    name = "null-scheduler-unshaded",
     srcs = glob(
-        ["**/NullLauncher.java"] +
-        ["**/NullScheduler.java"]
+        ["**/NullLauncher.java"] + [
+            "**/NullScheduler.java",
+        ],
     ),
     deps = scheduler_deps_files,
 )
@@ -110,90 +134,95 @@ genrule(
     name = "heron-null-scheduler",
     srcs = [":null-scheduler-unshaded_deploy.jar"],
     outs = ["heron-null-scheduler.jar"],
-    cmd  = "cp $< $@",
+    cmd = "cp $< $@",
 )
 
 java_library(
-    name='slurm-scheduler-java',
+    name = "slurm-scheduler-java",
     srcs = glob(["**/slurm/*.java"]),
+    resources = glob([
+        "**/slurm/*.sh",
+        "**/slurm/*.yaml",
+    ]),
     deps = scheduler_deps_files,
-    resources = glob(["**/slurm/*.sh","**/slurm/*.yaml"]),
 )
 
 java_binary(
-    name='slurm-scheduler-unshaded',
+    name = "slurm-scheduler-unshaded",
     srcs = glob(["**/slurm/*.java"]),
+    resources = glob([
+        "**/slurm/*.sh",
+        "**/slurm/*.yaml",
+    ]),
     deps = scheduler_deps_files,
-    resources = glob(["**/slurm/*.sh","**/slurm/*.yaml"]),
 )
 
 genrule(
     name = "heron-slurm-scheduler",
     srcs = [":slurm-scheduler-unshaded_deploy.jar"],
     outs = ["heron-slurm-scheduler.jar"],
-    cmd  = "cp $< $@",
+    cmd = "cp $< $@",
 )
 
 java_library(
-    name='yarn-scheduler-java',
+    name = "yarn-scheduler-java",
     srcs = glob(["**/yarn/*.java"]),
-    deps = yarn_deps_files,
     resources = glob(["**/yarn/*.yaml"]),
+    deps = yarn_deps_files,
 )
 
 java_binary(
-    name='yarn-scheduler-unshaded',
+    name = "yarn-scheduler-unshaded",
     srcs = glob(["**/yarn/*.java"]),
-    deps = yarn_deps_files,
     resources = glob(["**/yarn/*.yaml"]),
+    deps = yarn_deps_files,
 )
 
 genrule(
     name = "heron-yarn-scheduler",
     srcs = [":yarn-scheduler-unshaded_deploy.jar"],
     outs = ["heron-yarn-scheduler.jar"],
-    cmd  = "cp $< $@",
+    cmd = "cp $< $@",
 )
 
 java_library(
-    name='mesos-scheduler-java',
+    name = "mesos-scheduler-java",
     srcs = glob(["com/twitter/heron/scheduler/mesos/**/*.java"]),
-    deps = mesos_deps_files,
     resources = glob(["**/mesos/*.yaml"]),
+    deps = mesos_deps_files,
 )
 
 java_binary(
-    name='mesos-scheduler-unshaded',
+    name = "mesos-scheduler-unshaded",
     srcs = glob(["com/twitter/heron/scheduler/mesos/**/*.java"]),
-    deps = mesos_deps_files,
     resources = glob(["**/mesos/*.yaml"]),
+    deps = mesos_deps_files,
 )
 
 genrule(
     name = "heron-mesos-scheduler",
     srcs = [":mesos-scheduler-unshaded_deploy.jar"],
     outs = ["heron-mesos-scheduler.jar"],
-    cmd  = "cp $< $@",
+    cmd = "cp $< $@",
 )
 
-
 java_library(
-    name='marathon-scheduler-java',
+    name = "marathon-scheduler-java",
     srcs = glob(["com/twitter/heron/scheduler/marathon/**/*.java"]),
-    deps = marathon_deps_files,
     resources = glob(["**/marathon/*.yaml"]),
+    deps = marathon_deps_files,
 )
 
 java_binary(
-    name='marathon-scheduler-unshaded',
-    srcs=glob(["com/twitter/heron/scheduler/marathon/**/*.java"]),
-    deps = marathon_deps_files,
+    name = "marathon-scheduler-unshaded",
+    srcs = glob(["com/twitter/heron/scheduler/marathon/**/*.java"]),
     resources = glob(["**/marathon/*.yaml"]),
+    deps = marathon_deps_files,
 )
 
 genrule(
     name = "heron-marathon-scheduler",
     srcs = [":marathon-scheduler-unshaded_deploy.jar"],
     outs = ["heron-marathon-scheduler.jar"],
-    cmd  = "cp $< $@",
+    cmd = "cp $< $@",
 )
