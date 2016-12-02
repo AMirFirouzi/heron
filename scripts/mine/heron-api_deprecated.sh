@@ -28,7 +28,7 @@ echo "-@@@-changing directory to myheron..."
 cd $myheron_home
 
 echo "-@@@-start compiling heron..."
-if [ $module = "api" ]; then
+if [ $module=="api" ]; then
   bazel build  --config=ubuntu heron/api/src/java:heron-api
   check_failure "compile"
   

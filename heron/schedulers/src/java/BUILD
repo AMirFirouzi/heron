@@ -67,7 +67,7 @@ genrule(
     cmd = "cp $< $@",
 )
 
-#my custom scheduler
+#my custom scheduler begin
 java_library(
     name = "amirlocal-scheduler-java",
     srcs = glob(["**/amirlocal/*.java"]),
@@ -88,6 +88,7 @@ genrule(
     outs = ["heron-amirlocal-scheduler.jar"],
     cmd = "cp $< $@",
 )
+#my custom scheduler end
 
 java_library(
     name = "aurora-scheduler-java",
