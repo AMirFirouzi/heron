@@ -12,4 +12,8 @@ pex_binary(
         "resources/test.json",
     ],
     reqs = ["argparse==1.4.0"],
+    deps = [
+        "//heron/common/src/python:common-py",
+        "//integration-test/src/python/common",
+    ],
 )

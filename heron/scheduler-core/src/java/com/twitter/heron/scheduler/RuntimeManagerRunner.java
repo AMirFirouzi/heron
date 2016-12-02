@@ -14,6 +14,7 @@
 
 package com.twitter.heron.scheduler;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Callable;
@@ -194,7 +195,7 @@ public class RuntimeManagerRunner implements Callable<Boolean> {
             .setProposedPackingPlan(proposedPlan)
             .build();
 
-    LOG.info("Sending Updating topology request: " + updateTopologyRequest);
+    LOG.fine("Sending Updating topology request: " + updateTopologyRequest);
     if (!schedulerClient.updateTopology(updateTopologyRequest)) {
       LOG.log(Level.SEVERE, "Failed to update topology with Scheduler, updateTopologyRequest="
           + updateTopologyRequest);
@@ -240,6 +241,11 @@ public class RuntimeManagerRunner implements Callable<Boolean> {
       LOG.warning("Failed to clear scheduler location. Check whether Scheduler set it correctly.");
     }
 
+    result = statemgr.deleteLocks(topologyName);
+    if (result == null || !result) {
+      LOG.warning("Failed to delete locks. It's possible that the topology never created any.");
+    }
+
     result = statemgr.deleteExecutionState(topologyName);
     if (result == null || !result) {
       LOG.severe("Failed to clear execution state");
@@ -279,6 +285,8 @@ public class RuntimeManagerRunner implements Callable<Boolean> {
       throw new IllegalArgumentException(
           "Failed to instantiate packing instance: " + repackingClass, e);
     }
+
+    LOG.info("Updating packing plan using " + repackingClass);
     try {
       packing.initialize(config, topology);
       PackingPlan packedPlan = packing.repack(currentPackingPlan, componentChanges);
@@ -294,8 +302,10 @@ public class RuntimeManagerRunner implements Callable<Boolean> {
     Map<String, Integer> componentDeltas = new HashMap<>();
     for (String component : changeRequests.keySet()) {
       if (!componentCounts.containsKey(component)) {
-        throw new IllegalArgumentException(
-            "Invalid component name in update request: " + component);
+        throw new IllegalArgumentException(String.format(
+            "Invalid component name in update request: %s. Valid components include: %s",
+            component, Arrays.toString(
+                componentCounts.keySet().toArray(new String[componentCounts.keySet().size()]))));
       }
       Integer newValue = changeRequests.get(component);
       Integer delta = newValue - componentCounts.get(component);
