@@ -241,6 +241,7 @@ public class MetricsManagerServer extends HeronServer {
     for (Metrics.MetricDatum metricDatum : message.getMetricsList()) {
       MetricsInfo info = new MetricsInfo(metricDatum.getName(), metricDatum.getValue());
       metricsInfos.add(info);
+      LOG.info(String.format("MetricsInfoString:%s", metricsInfos.toString()));
     }
 
     List<ExceptionInfo> exceptionInfos = new ArrayList<ExceptionInfo>(message.getExceptionsCount());
