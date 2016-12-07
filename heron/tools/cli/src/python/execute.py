@@ -48,6 +48,7 @@ def heron_class(class_name, lib_jars, extra_jars=None, args=None, java_defines=N
   # Format all java -D options that need to be passed while running
   # the class locally.
   java_opts = ['-D' + opt for opt in java_defines]
+  java_opts.append('-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005')
 
   # Construct the command line for the sub process to run
   # Because of the way Python execute works,
